@@ -1,9 +1,9 @@
 # OS_Edge_Compute_Data_Capture_RPi
-An Edge Computing and Ambient Data CaptureSystem in Clinical and Home Environments.
+*An Edge Computing and Ambient Data Capture System in Clinical and Home Environments.*
 
 This repository contains scripts to simultaneously collect the following signals using off-body sensors.
-1. Human movement signal using passive infrared sensor.
-2. Global and local difference signals (as human movement detectors) from Raspberry Pi camera.
+1. Human movement signal using a passive infrared sensor.
+2. Global and local difference signals (as a proxy for human movement) using a Raspberry Pi camera.
 3. Mel spectorgram and MFCC features from audio recordings recorded using a Fifine USB microphone.
 4. Geolocation of Bluetooth devices.
 5. Ambient light logging using the TCS34725 color sensor.
@@ -19,7 +19,7 @@ This repository contains scripts to simultaneously collect the following signals
 7. A Bluetooth Beacon.
 
 ## Code Description
-Please run `INSTALL.sh` script in a command line on a Raspberry Pi to install all the necessary software before using the scripts in this repository. The `gui.py` contains the wrapper codes needed for recording human movement and ambient environement data (including illuminance, temperature and humidity). The `binarizeData.py` script can be used to convert data stored in text files to a binary format (specifically .mat). The `mseComputation.py` utilizes the compiled `mse` script to perform multi-scale entropy computations on various timeseries including the global difference signal. The `uploadToCloud.sh` is an example script that can be used to upload recorded data to a cloud database.The scripts `binarizeData.py`, `mseComputation.py` and `uploadToCloud.py` are all called from `gui.py` as subprocesses.
+Please run `INSTALL.sh` script in a command line on a Raspberry Pi to install all the necessary software before using the scripts in this repository. The `gui.py` contains the wrapper codes needed to record human movement and ambient environement data (including illuminance, temperature and humidity). The `binarizeData.py` script can be used to convert data stored in text files to a binary format (specifically .mat). The `mseComputation.py` utilizes the compiled `mse` script to perform multi-scale entropy computations on various 1-D signals including the global difference signal. The `uploadToCloud.sh` is an example script that can be used to upload recorded data to a cloud database.The scripts `binarizeData.py`, `mseComputation.py` and `uploadToCloud.py` are all called from `gui.py` as subprocesses.
 
 The folder `humanMovementDetectionToolbox` contains the python class and functions needed to capture human movement using the infrared Rapsberry Pi camera. The folder `ambientLightSensingToolbox` contains the python class and functions needed to capture light illuminance. The folder `temperatureAndHumiditySensingToolbox` contains the core script to capture ambient temperature and humidity values on a Raspberry Pi using the DHT22 sensor.
 
@@ -35,10 +35,12 @@ The folder `geolocationToolbox` contains all the code needed to capture and proc
 5. DHT22 sensor:  $9.99
 6. Microphone  : $35.99
 7. Beacon      : $24.00
+
 Total          =$139.22
 
 ## Citation
 
 Please cite the following work when using this codebase.
+
 *To be updated*
 
