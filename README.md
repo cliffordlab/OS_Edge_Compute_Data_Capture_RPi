@@ -36,7 +36,7 @@ The folder `geolocationToolbox` contains all the code needed to capture and proc
 6. Microphone  : $35.99
 7. Beacon      : $24.00
 
-Total          =$139.22
+Total          =$139.32
 
 ## Citation
 
