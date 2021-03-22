@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Author: Pradyumna Byppanahalli Suresha (alias Pradyumna94)
-Last Modified: Mar 5th, 2021
+Last Modified: Mar 22nd, 2021
 Copyright [2021] [Clifford Lab]
 LICENSE:
 This software is offered freely and without warranty under
@@ -99,7 +99,7 @@ while True:
         #args.filename = tempfile.mktemp(prefix='delme_rec_unlimited_',suffix='.wav', dir='')
         before = datetime.datetime.now()
         filename = time.strftime("%Y%m%d-%I-%M-%S-%p")
-        args.filename = '/home/pi/OS_Edge_Compute_Data_Capture_RPi/ambientSoundRecordingToolbox/data/wavfiles/' + cpuSerial + '_' + filename + '.wav'
+        args.filename = '/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordingToolbox/wavfiles/' + cpuSerial + '_' + filename + '.wav'
 
         # Make sure the file is opened before recording anything:
         with sf.SoundFile(args.filename, mode='x', samplerate=args.samplerate,

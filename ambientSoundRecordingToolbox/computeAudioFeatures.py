@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Author: Pradyumna Byppanahalli Suresha (alias Pradyumna94)
-Last Modified: Mar 5th, 2021
+Last Modified: Mar22nd, 2021
 Copyright [2021] [Clifford Lab]
 LICENSE:
 This software is offered freely and without warranty under
@@ -36,9 +36,11 @@ if __name__ == '__main__':
     featureFile = featureFilePath + featureFileName + '.mat'
     headerFile = featureFilePath + featureFileName + '.hea'
     
+    # We used audio files with sr = 22050 If the sampling rate is different, please specify with the 'sr' option.
     y, sr = librosa.load(args.filename)
     blocksize = 30 #ms
     blocksize = round((blocksize / 1000) * sr) # samples
+    # 
     win_length = next_power_of_2(blocksize)
     hop_length = round(win_length / 2)
     n_fft = win_length
@@ -61,7 +63,7 @@ if __name__ == '__main__':
     fp.write('# of MFCC = ' + str(len(M)) + '\n')
     
     ## Energy in different frequency bands (10 coefficients)
-    D = np.abs(librosa.core.stft(y, n_fft=win_length, hop_length=hop_length, win_length=win_length, window='hann')) # Use n_fft = win_length
+    D = np.square(np.abs(librosa.core.stft(y, n_fft=win_length, hop_length=hop_length, win_length=win_length, window='hann'))) # Use n_fft = win_length
     
     # Create Energy Computation Windows to be used for mearging stft computations
     
@@ -81,7 +83,7 @@ if __name__ == '__main__':
     features['energies'] = E
     fp.write('(2) Band Energy: ' + str(E.shape) + '\n')
     fp.write('# of Filterbanks = ' + str(len(E)) + '\n')
-    ## Sample Entropy (1 value) -- Too much computation time!! Skipping for now.
+    ## Sample Entropy (1 value) -- Too slow on RPi3!! So, Skipping for now.
     """
     ii = 0
     sampleEntropy = []
