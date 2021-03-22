@@ -40,6 +40,8 @@ sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/wavfiles
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/features
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox
+sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox/data
+sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox/dataUpload
 
 # Provide '777' permission to the created data directories (A redundant step to make sure data write never fails. A better solution is indeed possible.)
 sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data
@@ -48,9 +50,10 @@ sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/pir/*
 sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ir/*
 sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/color/*
 sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/temperatureAndHumidity/*
-sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/wavfiles
-sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/features
+sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/*
 sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox/*
+
+sudo apt-get update
 
 # Install ALSA-mixer
 sudo apt-get install -y libasound-dev
@@ -124,4 +127,11 @@ pip3 install Adafruit_DHT
 # Save git username and password locally to run git pull hassle-free
 git config credential.helper store
 while true; do git pull && break || sleep 2; done
+
+# geolocationToolbox related installations
+sudo apt-get install libglib2.0-dev ntp ntpdate
+pip3 install bluepy
+pip3 install pandas
+blue_path=$(pip3 show bluepy | grep Location: | awk -F " " '{path=$2"/bluepy/bluepy-helper"; print path}')
+sudo setcap 'cap_net_raw,cap_net_admin+eip' $blue_path
 
