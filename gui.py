@@ -204,7 +204,7 @@ class interface:
 
     def autorecmenu(self):
         """ Run auto-record-menu GUI to set auto-recording times """
-        subprocess.Popen(['python3', '/home/pi/PIR-interface/codes/auto_record_menu.py'])
+        subprocess.Popen(['python3', '/home/pi/OS_Edge_Compute_Data_Capture_RPi/auto_record_menu.py'])
     
     # An example function of what can be done. There is much room for improvement.
     def graph_data(self):
@@ -327,7 +327,7 @@ class interface:
         # cpuSerial = getSerial()
         
         # Read autorec_time_tracker to start, continue or stop recording
-        with open('/home/pi/PIR-interface/codes/autorec_time_tracker','r') as f:
+        with open('/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker','r') as f:
             BHr = f.readline()[:-1]
             BMin = f.readline()[:-1]
             BSec = f.readline()[:-1]
