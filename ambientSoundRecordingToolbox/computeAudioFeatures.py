@@ -112,7 +112,7 @@ if __name__ == '__main__':
     
     sio.savemat(featureFile, features)
     fp.close()
-    subprocess.check_output(['xterm','-e','/home/pi/OS_Edge_Compute_Data_Capture_RPi/ambientSoundRecordingToolbox/backup.sh'])
+    #subprocess.check_output(['xterm','-e','/home/pi/OS_Edge_Compute_Data_Capture_RPi/ambientSoundRecordingToolbox/backup.sh'])
     os.unlink(args.filename)
     
     

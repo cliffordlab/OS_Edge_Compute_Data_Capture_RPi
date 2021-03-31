@@ -19,13 +19,6 @@ rclone mkdir EmoryBox:CFD/audioFeatures/${folder}
 rclone mkdir EmoryBox:CFD/audioFeatures/${folder}/features
 rclone mkdir EmoryBox:CFD/audioFeatures/${folder}/features/${dirName}
 
-# Transfer audio feature files to Emory AWS
-#for fullFilePathName in /home/pi/OS_Edge_Compute_Data_Capture_RPi/ambientSoundRecordingToolbox/data/features/*; do
-#fileName=${fullFilePathName##*/}
-#curl --request POST -H "Content-Type: application/mat" --data-binary "@${fullFilePathName}" https://uniquePath.amazonaws.com/version#/apiGateway?path=${folder}/pir/${fileName}
-#rm ${fullFilePathName}
-#done
-
 # rclone move audio feature files to Emory Box
 rclone move /home/pi/OS_Edge_Compute_Data_Capture_RPi/ambientSoundRecordingToolbox/data/features EmoryBox:repoName/audioFeatures/${folder}/features/${dirName}
 
