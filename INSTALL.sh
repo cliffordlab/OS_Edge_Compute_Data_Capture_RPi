@@ -34,7 +34,6 @@ sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/wavfiles
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/ambientSoundRecordings/features
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox
-sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox/data
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/geolocationToolbox/dataUpload
 
 # Provide '777' permission to the created data directories (A redundant step to make sure data write never fails. A better solution is indeed possible.)
