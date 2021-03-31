@@ -293,14 +293,14 @@ if __name__ == '__main__':
     
     # Try and create directories if they don't exist for whatever reason
     try:
-        os.mkdir('/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/th')
+        os.mkdir('/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/temperatureAndHumidity')
     except OSError as exc:
         if exc.errno != errno.EEXIST:
             raise
         pass
     
     try:
-        os.mkdir('/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/th/bin')
+        os.mkdir('/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/temperatureAndHumidity/bin')
     except OSError as exc:
         if exc.errno != errno.EEXIST:
             raise

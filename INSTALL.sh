@@ -14,12 +14,6 @@ curl https://rclone.org/install.sh | sudo bash
 # Run rclone config
 rclone config
 
-# Copy shortcut executable files to Desktop
-sudo cp /home/pi/OS_Edge_Compute_Data_Capture_RPi/codes/interfaceV2.desktop /home/pi/Desktop/.
-sudo cp /home/pi/OS_Edge_Compute_Data_Capture_RPi/codes/INSTALL.desktop /home/pi/Desktop/.
-sudo cp /home/pi/OS_Edge_Compute_Data_Capture_RPi/codes/AboutThisPi.desktop /home/pi/Desktop/.
-sudo cp /home/pi/OS_Edge_Compute_Data_Capture_RPi/codes/uRC_cSI.desktop /home/pi/Desktop/.
-
 # Create new directories
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/
 sudo mkdir /home/pi/OS_Edge_Compute_Data_Capture_RPi/data/pir
