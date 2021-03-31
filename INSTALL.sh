@@ -129,3 +129,13 @@ pip3 install pandas
 blue_path=$(pip3 show bluepy | grep Location: | awk -F " " '{path=$2"/bluepy/bluepy-helper"; print path}')
 sudo setcap 'cap_net_raw,cap_net_admin+eip' $blue_path
 
+# Setup auto_time_tracker
+echo "3">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "0">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "0">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "PM">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "9">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "0">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "0">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+echo "AM">>/home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
+sudo chmod 777 /home/pi/OS_Edge_Compute_Data_Capture_RPi/autorec_time_tracker
