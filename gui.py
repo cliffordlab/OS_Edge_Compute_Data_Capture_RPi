@@ -504,9 +504,15 @@ class interface:
                 f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (R,G,B,C,RGB565,RGB888,LUX,CT,INT))            
             
             # Record Temperature and Humidity
+            temp = dht22_sensor.return_temperature()
+            if type(temp) == str:
+                temp = -1
+            temp = round(float(temp) * 10) / 10
             
-            temp = round(float(dht22_sensor.return_temperature()) * 10) / 10
-            hum = round(float(dht22_sensor.return_humidity()) * 10) / 10
+            hum = dht22_sensor.return_humidity()
+            if type(hum) == str:
+                hum = -1
+            hum = round(float(hum) * 10) / 10
             
             with open('/home/pi/OS_Edge_Compute_Data_Capture_RPi/data/temperatureAndHumidity/'+ cpuSerial + '_' + filename + '_th.txt','a+') as f:
                 f.write("%s,%s\n" % (temp, hum))            
