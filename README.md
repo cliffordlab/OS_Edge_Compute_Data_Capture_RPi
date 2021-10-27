@@ -28,15 +28,16 @@ The folders `ambientSoundRecordingToolbox` and `ambientSoundAnalysisToolbox` con
 The folder `geolocationToolbox` contains all the code needed to capture and process Bluetooth signal strength data to determine the location of a Bluetooth beacon.
 
 ## Bill of Materials [As of Mar 22, 2021]
-1. Raspberry Pi: $35.00
-2. PIR sensor  :  $2.00
-3. RPi camera  : $22.99
-4. TCS34725    :  $9.35
-5. DHT22 sensor:  $9.99
-6. Microphone  : $35.99
-7. Beacon      : $24.00
+1. Raspberry Pi         : $35.00
+2. PIR sensor           :  $2.00
+3. RPi camera           : $22.99
+4. TCS34725             :  $9.35
+5. DHT22 sensor         :  $9.99
+6. Microphone           : $35.99
+7. Beacon               : $24.00
+8. Coral USB Accelerator: $59.99
 
-Total          =$139.32
+Total                   = $199.31
 
 ## Citation
 
