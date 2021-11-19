@@ -27,6 +27,14 @@ The folders `ambientSoundRecordingToolbox` and `ambientSoundAnalysisToolbox` con
 
 The folder `geolocationToolbox` contains all the code needed to capture and process Bluetooth signal strength data to determine the location of a Bluetooth beacon.
 
+## Amount of data recorded and data type
+1. PIR sensor: One 32-bit floating point number per second
+2. RPI camera: 42 32-bit floating point numbers per second
+3. TCS34725: One 32-bit floating point number per second
+4. DHT22 sensor: Two 32-bit floating point numbers per second
+5. Microphone: 60 32-bit floating point numbers per second
+6. Beacon: Two 32-bit floating point numbers per second per Beacon per Raspberry Pi
+
 ## Bill of Materials [As of Mar 22, 2021]
 1. Raspberry Pi         : $35.00 [57mm X 87mm]
 2. PIR sensor           :  $2.00 [24mm X 32mm X 25mm]
