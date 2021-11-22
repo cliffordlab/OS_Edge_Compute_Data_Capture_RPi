@@ -43,9 +43,9 @@ The folder `geolocationToolbox` contains all the code needed to capture and proc
 5. DHT22 sensor         :  $9.99 [15.3mm X 7.8mm X 25.3mm]
 6. Microphone           : $35.99 [124mm X 66mm X 185mm]
 7. Beacon               : $24.00 [56mm X 55mm X 15mm]
-8. Coral USB Accelerator: $59.99 [65 mm x 30 mm]
+8. Coral USB Accelerator: $59.99 [65mm x 30mm]
 
-Total                   = $199.31
+Total                   = $199.31 [50cm X 35cm]
 
 ## Citation
 
